@@ -4,6 +4,8 @@
 	<declare-styleable name="WaveView">
 		<attr name="above_wave_color" format="color"/>
 		<attr name="blow_wave_color" format="color"/>
+        <attr name="above_wave_alpha" format="integer"/>
+        <attr name="blow_wave_alpha" format="integer"/>
 		<attr name="progress" format="integer"/>
         <attr name="wave_length" format="enum">
             <enum name="large" value="1"/>

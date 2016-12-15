@@ -22,9 +22,6 @@ class Wave extends View {
     private final float WAVE_HZ_NORMAL = 0.09f;
     private final float WAVE_HZ_SLOW = 0.05f;
 
-    public final int DEFAULT_ABOVE_WAVE_ALPHA = 50;
-    public final int DEFAULT_BLOW_WAVE_ALPHA = 30;
-
     private final float X_SPACE = 20;
     private final double PI2 = 2 * Math.PI;
 
@@ -36,6 +33,9 @@ class Wave extends View {
 
     private int mAboveWaveColor;
     private int mBlowWaveColor;
+
+    private int mAboveWaveAlpha;
+    private int mBlowWaveAlpha;
 
     private float mWaveMultiple;
     private float mWaveLength;
@@ -77,6 +77,14 @@ class Wave extends View {
         this.mBlowWaveColor = blowWaveColor;
     }
 
+    public void setAboveWaveAlpha(int aboveWaveAlpha) {
+        this.mAboveWaveAlpha = aboveWaveAlpha;
+    }
+
+    public void setBlowWaveAlpha(int blowWaveAlpha) {
+        this.mBlowWaveAlpha = blowWaveAlpha;
+    }
+
     public Paint getAboveWavePaint() {
         return mAboveWavePaint;
     }
@@ -97,12 +105,12 @@ class Wave extends View {
 
     public void initializePainters() {
         mAboveWavePaint.setColor(mAboveWaveColor);
-        mAboveWavePaint.setAlpha(DEFAULT_ABOVE_WAVE_ALPHA);
+        mAboveWavePaint.setAlpha(mAboveWaveAlpha);
         mAboveWavePaint.setStyle(Paint.Style.FILL);
         mAboveWavePaint.setAntiAlias(true);
 
         mBlowWavePaint.setColor(mBlowWaveColor);
-        mBlowWavePaint.setAlpha(DEFAULT_BLOW_WAVE_ALPHA);
+        mBlowWavePaint.setAlpha(mBlowWaveAlpha);
         mBlowWavePaint.setStyle(Paint.Style.FILL);
         mBlowWavePaint.setAntiAlias(true);
     }

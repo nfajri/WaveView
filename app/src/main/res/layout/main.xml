@@ -11,6 +11,8 @@
         android:background="#ff702e8c"
         wave:above_wave_color="@android:color/white"
         wave:blow_wave_color="@android:color/white"
+        wave:blow_wave_alpha="50"
+        wave:above_wave_alpha="30"
         wave:progress="80"
         wave:wave_height="little"
         wave:wave_hz="normal"
